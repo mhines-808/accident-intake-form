@@ -1,0 +1,184 @@
+ :root {
+    --navy: #1a2140;
+    --navy-deep: #12172e;
+    --orange: #de7c34;
+    --orange-dark: #c2661f;
+    --text: #1a2140;
+    --text-muted: #6b7285;
+    --border: #dfe2ea;
+    --bg: #f6f7f9;
+    --error: #b3261e;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+ .centered-text {
+  text-align: center;
+}
+
+  /* ---------- Header ---------- */
+  header {
+    background: var(--navy);
+    padding: 20px 32px;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .logo span { color: var(--orange); }
+
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-align: right;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1.35;
+  }
+  .badge svg { flex-shrink: 0; }
+
+  /* ---------- Question card ---------- */
+  main {
+    padding: 56px 20px 80px;
+  }
+  .qcard {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(26, 33, 64, 0.12);
+    padding: 48px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .qcard h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--navy);
+    margin: 0 0 10px;
+  }
+  .qcard .helper {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0 0 18px;
+  }
+
+  .qcard select,
+  .qcard input[type="text"],
+  .qcard input[type="email"],
+  .qcard input[type="tel"] {
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 1.05rem;
+    font-family: inherit;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: linear-gradient(#ffffff, #f3f4f7);
+    margin-bottom: 14px;
+  }
+ .qcard select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%236b7285' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  padding-right: 44px;
+}
+  .qcard select:focus,
+  .qcard input:focus {
+    outline: none;
+    border-color: var(--navy);
+  }
+  .qcard label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .field-error {
+    display: none;
+    color: var(--error);
+    font-size: 0.82rem;
+    margin: -8px 0 14px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 17px 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.15s ease;
+    margin-top: 6px;
+  }
+  .cta-btn:hover { background: var(--orange-dark); }
+  .arrow-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    line-height: 1;
+  }
+
+  .disclaimer {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 16px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .disqualified-msg {
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .disqualified-msg strong { display: block; color: var(--navy); font-size: 1.3rem; margin-bottom: 10px; }
+
+  footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding: 0 20px 40px;
+  }
+
+  @media (max-width: 640px) {
+    .qcard { padding: 32px 24px; }
+    .qcard h1 { font-size: 1.5rem; }
+    .header-inner { flex-direction: column; gap: 10px; text-align: center; }
+  }

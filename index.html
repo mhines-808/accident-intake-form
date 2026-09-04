@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Case Review | Hines & Associates</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KLVW6J7G");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLVW6J7G" height="0" width="0" style="display: none; visibility: hidden"></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+      <div class="header-inner">
+        <div class="logo">Hines <span>&amp;</span> Associates</div>
+        <div class="badge">
+          <span>Confidential<br />Case Review</span>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="10" width="16" height="11" rx="2" fill="#fff" />
+            <path d="M7 10V7a5 5 0 0 1 10 0v3" stroke="#fff" stroke-width="2" fill="none" />
+            <rect x="10.5" y="14" width="3" height="4" rx="1" fill="var(--navy)" />
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <form id="intake-form" novalidate>
+        <!-- Step 1: car accident -->
+        <div class="qcard form-step" id="step-1" data-step="1">
+          <h1>Were you injured in a car accident?</h1>
+          <p class="helper">Select one of the options</p>
+          <select id="step-1-select" name="car-accident">
+            <option value="" disabled selected>Please choose</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <div class="field-error" id="step-1-error">Please select an option.</div>
+          <button type="button" class="cta-btn" id="step-1-next">Get Started <span class="arrow-circle">&rarr;</span></button>
+        </div>
+
+        <!-- Shown instead of the form when step 1 disqualifies -->
+        <div class="qcard form-step" id="step-1-disqualified" data-step="1-disqualified" style="display: none">
+          <p class="disqualified-msg">
+            <strong>We're not able to help with this one.</strong>Right now we only take cases involving car accidents, so we won't be able to move forward.
+            We're sorry we couldn't be of more help — please consider reaching out to a general injury attorney in your area.
+          </p>
+        </div>
+
+        <!-- Step 2: damages -->
+        <div class="qcard form-step" id="step-2" data-step="2" style="display: none">
+          <h1>What's the estimated total of your losses so far?</h1>
+          <p class="helper">Select one of the options</p>
+          <select id="step-2-select" name="damages-range">
+            <option value="" disabled selected>Please choose</option>
+            <option value="0-5000">$0 &ndash; $5,000</option>
+            <option value="5100-10000">$5,100 &ndash; $10,000</option>
+            <option value="10100-20000">$10,100 &ndash; $20,000</option>
+            <option value="21000+">$21,000 or more</option>
+          </select>
+          <div class="field-error" id="step-2-error">Please select a range.</div>
+          <button type="button" class="cta-btn" id="step-2-next">Continue <span class="arrow-circle">&rarr;</span></button>
+        </div>
+
+        <!-- Step 3: insurance -->
+        <div class="qcard form-step" id="step-3" data-step="3" style="display: none">
+          <h1>Do you have automobile insurance?</h1>
+          <p class="helper">Select one of the options</p>
+          <select id="step-3-select" name="has-insurance">
+            <option value="" disabled selected>Please choose</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <div class="field-error" id="step-3-error">Please select an option.</div>
+          <button type="button" class="cta-btn" id="step-3-next">Continue <span class="arrow-circle">&rarr;</span></button>
+        </div>
+
+        <!-- Shown instead of the form when step 3 disqualifies -->
+        <div class="qcard form-step" id="step-3-disqualified" data-step="3-disqualified" style="display: none">
+          <p class="disqualified-msg">
+            <strong>We're not able to move forward.</strong>Based on your answer, we're not able to take on your case at this time. We're sorry we couldn't be
+            of more help.
+          </p>
+        </div>
+
+        <!-- Step 4: existing representation -->
+        <div class="qcard form-step" id="step-4" data-step="4" style="display: none">
+          <h1>Do you already have a lawyer for this case?</h1>
+          <p class="helper">Select one of the options</p>
+          <select id="step-4-select" name="has-lawyer">
+            <option value="" disabled selected>Please choose</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <div class="field-error" id="step-4-error">Please select an option.</div>
+          <button type="button" class="cta-btn" id="step-4-next">Continue <span class="arrow-circle">&rarr;</span></button>
+        </div>
+
+        <!-- Shown instead of the form when step 4 disqualifies -->
+        <div class="qcard form-step" id="step-4-disqualified" data-step="4-disqualified" style="display: none">
+          <p class="disqualified-msg">
+            <strong>We're not able to move forward.</strong>Based on your answer, we're not able to take on your case at this time. We're sorry we couldn't be
+            of more help.
+          </p>
+        </div>
+
+        <!-- Step 5: contact info -->
+        <div class="qcard form-step" id="step-5" data-step="5" style="display: none">
+          <h1>Almost done &mdash; where should we send your case review?</h1>
+          <p class="helper">Takes less than a minute. All information is confidential.</p>
+
+          <label for="full-name">Full name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Jane Smith" autocomplete="name" />
+          <div class="field-error" id="error-full-name">Please enter your full name.</div>
+
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" />
+          <div class="field-error" id="error-email">Please enter a valid email address.</div>
+
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" />
+          <div class="field-error" id="error-phone">Please enter a valid 10-digit phone number.</div>
+
+          <button type="submit" class="cta-btn">Get My Free Case Review <span class="arrow-circle">&rarr;</span></button>
+          <p class="disclaimer">
+            By submitting, you agree to be contacted about your case by phone, text, or email. This is attorney advertising — prior results do not guarantee a
+            similar outcome.
+          </p>
+        </div>
+      </form>
+    </main>
+
+    <footer>&copy; 2026 Hines &amp; Associates. This page is a portfolio demo project — not a real law firm.</footer>
+
+    <script src="script.js?v=5"></script>
+  </body>
+</html>
